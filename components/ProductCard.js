@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import { useState } from "react";
-export default function ProductCard({ name, price, image }) {
+export default function ProductCard({ name, price, image, addToCart }) {
   const [added, setAdded] = useState(false);
   return (
     <div className="rounded-2xl border p-6">
@@ -15,7 +15,15 @@ export default function ProductCard({ name, price, image }) {
       <h2 className="font-semibold text-xl mt-4">{name}</h2>
       <p className="mt-2 text-lg text-gray-600">₹{price}</p>
       <button
-        onClick={() => setAdded(true)}
+        onClick={() => {
+          setAdded(true);
+          addToCart({
+            name,
+            price,
+            image,
+            quantity: 1,
+          });
+        }}
         className="mt-4 rounded-full bg-green-600 px-5 py-2 font-medium text-white"
       >
         {added ? "Added ✓" : "Add to Cart"}
