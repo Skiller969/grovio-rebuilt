@@ -33,7 +33,7 @@ export default function ProductCard({ name, price, image, addToCart }) {
         }}
         className="mt-4 rounded-xl border px-4 py-2"
       >
-        {added ? "Added ✓" : "Add to Cart"}
+        {"Add to Cart"}
       </button>
     </div>
   );
