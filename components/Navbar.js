@@ -17,6 +17,7 @@ export default function Navbar() {
         <Link href="/">Home</Link>
 
         <Link href="/products">Products</Link>
+        <Link href="/signUp/page.js">Sign up</Link>
 
         <Link href="/cart">Cart ({cart.length})</Link>
       </div>
