@@ -1,0 +1,181 @@
+[
+  {
+    "id": 1,
+    "name": "Fresh Apple",
+    "price": 120,
+    "category": "Fruits",
+    "image": "/products/apple.png"
+  },
+  {
+    "id": 2,
+    "name": "Banana",
+    "price": 60,
+    "category": "Fruits",
+    "image": "/products/banana.png"
+  },
+  {
+    "id": 3,
+    "name": "Mango",
+    "price": 150,
+    "category": "Fruits",
+    "image": "/products/mango.png"
+  },
+  {
+    "id": 4,
+    "name": "Grapes",
+    "price": 100,
+    "category": "Fruits",
+    "image": "/products/grapes.png"
+  },
+  {
+    "id": 5,
+    "name": "Dragon Fruit",
+    "price": 180,
+    "category": "Fruits",
+    "image": "/products/dragon-fruit.png"
+  },
+
+  {
+    "id": 6,
+    "name": "Potato",
+    "price": 40,
+    "category": "Vegetables",
+    "image": "/products/potato.png"
+  },
+  {
+    "id": 7,
+    "name": "Cabbage",
+    "price": 45,
+    "category": "Vegetables",
+    "image": "/products/cabbage.png"
+  },
+  {
+    "id": 8,
+    "name": "Spinach",
+    "price": 30,
+    "category": "Vegetables",
+    "image": "/products/spinach.png"
+  },
+  {
+    "id": 9,
+    "name": "Okra",
+    "price": 50,
+    "category": "Vegetables",
+    "image": "/products/okra.png"
+  },
+  {
+    "id": 10,
+    "name": "Beetroot",
+    "price": 45,
+    "category": "Vegetables",
+    "image": "/products/beetroot.png"
+  },
+
+  {
+    "id": 11,
+    "name": "Toned Milk",
+    "price": 65,
+    "category": "Dairy",
+    "image": "/products/tonedmilk.png"
+  },
+  {
+    "id": 12,
+    "name": "Butter",
+    "price": 55,
+    "category": "Dairy",
+    "image": "/products/butter.png"
+  },
+  {
+    "id": 13,
+    "name": "Curd",
+    "price": 50,
+    "category": "Dairy",
+    "image": "/products/curd.png"
+  },
+  {
+    "id": 14,
+    "name": "Paneer",
+    "price": 90,
+    "category": "Dairy",
+    "image": "/products/paneer.png"
+  },
+  {
+    "id": 15,
+    "name": "Eggs 6 Pack",
+    "price": 75,
+    "category": "Dairy",
+    "image": "/products/eggs-6-pack.png"
+  },
+
+  {
+    "id": 16,
+    "name": "Brown Bread",
+    "price": 45,
+    "category": "Bakery",
+    "image": "/products/brown-bread.png"
+  },
+  {
+    "id": 17,
+    "name": "Croissant",
+    "price": 60,
+    "category": "Bakery",
+    "image": "/products/croissant.png"
+  },
+  {
+    "id": 18,
+    "name": "Cupcake",
+    "price": 50,
+    "category": "Bakery",
+    "image": "/products/cupcake.png"
+  },
+  {
+    "id": 19,
+    "name": "Donut",
+    "price": 45,
+    "category": "Bakery",
+    "image": "/products/donut.png"
+  },
+  {
+    "id": 20,
+    "name": "Tart",
+    "price": 70,
+    "category": "Bakery",
+    "image": "/products/tart.png"
+  },
+
+  {
+    "id": 21,
+    "name": "Choco Chip Cookies",
+    "price": 40,
+    "category": "Snacks",
+    "image": "/products/cookies.png"
+  },
+  {
+    "id": 22,
+    "name": "Corn Puff",
+    "price": 35,
+    "category": "Snacks",
+    "image": "/products/corn-puff.png"
+  },
+  {
+    "id": 23,
+    "name": "Cream Biscuits",
+    "price": 30,
+    "category": "Snacks",
+    "image": "/products/cream-biscuits.png"
+  },
+  {
+    "id": 24,
+    "name": "Trail Mix",
+    "price": 120,
+    "category": "Snacks",
+    "image": "/products/trail-mix.png"
+  },
+  {
+    "id": 25,
+    "name": "Potato chips",
+    "price": 50,
+    "category": "Snacks",
+    "image": "/products/chips.png"
+  }
+]
