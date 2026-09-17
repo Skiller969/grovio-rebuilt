@@ -1,4 +1,4 @@
-// components/HelpCard.js
+
 
 export default function HelpCard({ icon: Icon, title, description }) {
   return (
