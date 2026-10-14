@@ -1,38 +1,47 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Grovio
 
-## Getting Started
+Grovio is a grocery shopping app I built while learning Next.js and Electron. You can browse everyday products, add them to a cart, change quantities, and go through a checkout flow.
 
-First, run the development server:
+I built it to practice working with React components, shared state, authentication, and a database rather than just making another static page.
+
+## Built with
+
+- Next.js and React
+- Tailwind CSS
+- Supabase for authentication and order storage
+- Electron for the desktop version
+
+## Run locally
+
+Install dependencies:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Create a local `.env.local` with your own Supabase project values:
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+```env
+NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
+NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY=your_supabase_publishable_key
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Run the web app:
 
-## Learn More
+```bash
+npm run web
+```
 
-To learn more about Next.js, take a look at the following resources:
+Open http://localhost:3000. To run the Electron desktop app as well, use `npm run dev`.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+The checkout flow expects an `orders` table in Supabase with columns for the signed-in user, customer details, items and total. It is a learning project, not a live grocery delivery service or payment processor.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## What I learned
 
-## Deploy on Vercel
+This project helped me understand component-based UI, routing, cart state, connecting Supabase authentication, and running a web app inside Electron.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Still improving
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+I'm working on making the layout more responsive, improving the checkout experience, and cleaning up the code.
 
-
+Built by [Skiller969](https://github.com/Skiller969).
