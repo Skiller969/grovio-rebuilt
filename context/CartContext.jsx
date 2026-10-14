@@ -8,72 +8,37 @@ export function CartProvider({ children }) {
   const [cart, setCart] = useState([]);
 
   function addToCart(product) {
-    const existingProduct = cart.find((item) => item.name === product.name);
-
-    if (existingProduct) {
-      const updatedCart = cart.map((item) => {
-        if (item.name === product.name) {
-          return {
-            ...item,
-            quantity: item.quantity + 1,
-          };
-        }
-
-        return item;
-      });
-
-      setCart(updatedCart);
-    } else {
-      setCart([...cart, product]);
-    }
-  }
-
-  function increaseQuantity(productName) {
-    const updatedCart = cart.map((item) => {
-      if (item.name === productName) {
-        return {
-          ...item,
-          quantity: item.quantity + 1,
-        };
+    setCart(current => {
+      const existing = current.find(item => item.name === product.name);
+      if (existing) {
+        return current.map(item => item.name === product.name
+          ? { ...item, quantity: item.quantity + 1 }
+          : item);
       }
-
-      return item;
+      return [...current, { ...product, quantity: 1 }];
     });
-
-    setCart(updatedCart);
   }
 
-  function decreaseQuantity(productName) {
-    const updatedCart = cart
-      .map((item) => {
-        if (item.name === productName) {
-          return {
-            ...item,
-            quantity: item.quantity - 1,
-          };
-        }
-
-        return item;
-      })
-      .filter((item) => item.quantity > 0);
-
-    setCart(updatedCart);
+  function increaseQuantity(name) {
+    setCart(current => current.map(item => item.name === name
+      ? { ...item, quantity: item.quantity + 1 }
+      : item));
   }
 
-  const total = cart.reduce((sum, product) => {
-    return sum + product.price * product.quantity;
-  }, 0);
+  function decreaseQuantity(name) {
+    setCart(current => current
+      .map(item => item.name === name ? { ...item, quantity: item.quantity - 1 } : item)
+      .filter(item => item.quantity > 0));
+  }
+
+  function clearCart() {
+    setCart([]);
+  }
+
+  const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
 
   return (
-    <CartContext.Provider
-      value={{
-        cart,
-        addToCart,
-        increaseQuantity,
-        decreaseQuantity,
-        total,
-      }}
-    >
+    <CartContext.Provider value={{ cart, addToCart, increaseQuantity, decreaseQuantity, clearCart, total }}>
       {children}
     </CartContext.Provider>
   );
