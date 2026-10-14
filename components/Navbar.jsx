@@ -54,7 +54,10 @@ export default function Navbar() {
           {user ? (
             <button onClick={handleSignOut} className="hidden rounded-lg border px-3 py-2 hover:bg-gray-50 md:block">Sign out</button>
           ) : (
-            <Link href="/signin" className="hidden rounded-lg border px-3 py-2 hover:bg-gray-50 md:block">Sign in</Link>
+            <div className="hidden items-center gap-2 md:flex">
+              <Link href="/signin" className="rounded-lg border px-3 py-2 hover:bg-gray-50">Sign in</Link>
+              <Link href="/signup" className="rounded-lg bg-green-700 px-3 py-2 text-white hover:bg-green-800">Sign up</Link>
+            </div>
           )}
           <button type="button" onClick={() => setMenuOpen(open => !open)} className="rounded-lg border px-3 py-2 md:hidden" aria-label="Toggle navigation" aria-expanded={menuOpen} aria-controls="grovio-mobile-menu">
             ☰
